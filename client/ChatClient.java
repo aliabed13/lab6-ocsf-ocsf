@@ -101,7 +101,7 @@ public class ChatClient extends AbstractClient
     {
       try
       {
-    	  if (message.toLowerCase().startsWith("send"))
+    	   if (message.toLowerCase().startsWith("send"))
     	        sendToServer("name: Ameer kadi ID: 209023969 address: Majdal shams \n"
     	        		+ "name: Fidaa Shkeer ID: 318483971 address: Majdal shams");
     	    	  
