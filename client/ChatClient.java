@@ -101,7 +101,11 @@ public class ChatClient extends AbstractClient
     {
       try
       {
-        sendToServer(message);
+    	  if (message.toLowerCase().startsWith("send"))
+    	        sendToServer("name: Ameer kadi ID: 209023969 address: Majdal shams \n"
+    	        		+ "name: Fidaa Shkeer ID: 318483971 address: Majdal shams");
+    	    	  
+    	    	  else sendToServer(message);
       }
       catch(IOException e)
       {
@@ -184,6 +188,16 @@ public class ChatClient extends AbstractClient
     else if (message.equalsIgnoreCase("#getport"))
     {
       clientUI.display("Current port: " + Integer.toString(getPort()));
+    }
+    else if (message.equalsIgnoreCase("#send"))
+    {
+    	   try {
+			sendToServer("name: Ameer kadi ID: 209023969 address: Majdal shams \n"
+			    		+ "name: Fidaa Shkeer ID: 318483971 address: Majdal shams");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
   }
   
